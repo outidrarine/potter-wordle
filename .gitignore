@@ -1,0 +1,8 @@
+*bak.sql
+*.png
+*.jpg
+*.jpeg
+*.webp
+./populateDBScripts/.env
+*.key
+*.pem
