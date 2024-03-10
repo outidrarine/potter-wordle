@@ -1,1 +1,0 @@
-eval $(aws ecr get-login-password | sed 's|https://||')
