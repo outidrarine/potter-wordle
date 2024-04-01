@@ -38,7 +38,7 @@ export default function Game() {
       .get(Config.url + "/champions")
       .then((response) => {
         if (response.data.status === "success") {
-          const data = response.data.champions;
+          const data = response.data.hpCharacters;
           data.sort((a, b) => a.value.localeCompare(b.value));
           const transformedData = data.map((champion) => ({
             value: champion.value,
@@ -140,13 +140,13 @@ export default function Game() {
             filterOption={customFilterOption}
             formatOptionLabel={(data) => (
               <div className="select-option">
-                <LazyLoad offset={200}>
+                {/* <LazyLoad offset={200}>
                   <img
                     //src={"/40_40/champions/" + data.image + ".webp"}
                     src={"/40_40/champions/" + "test" + ".webp"}
                     alt="Champion icon"
                   />
-                </LazyLoad>
+                </LazyLoad> */}
                 <span>{data.label}</span>
               </div>
             )}
@@ -186,19 +186,17 @@ export default function Game() {
       <div id="champions">
         {champions.map((champ) => (
           <ChampionDetails
-            key={champ[0].championKey}
-            championKey={champ[0].championKey}
+            key={champ[0].characterName}
+            characterName={champ[0].characterName}
+            roleJob={champ[0].roleJob}
+            keyItem={champ[0].keyItem}
+            loyalty={champ[0].loyalty}
+            magicalAbility={champ[0].magicalAbility}
+            firstAppearanceBookNumber={champ[0].firstAppearanceBookNumber}
             gender={champ[0].gender}
-            genre={champ[0].genre}
-            resource={champ[0].resource}
-            rangeTypes={champ[0].rangeType}
-            positions={champ[0].position}
-            releaseYear={champ[0].releaseYear}
-            regions={champ[0].region}
-            damageType={champ[0].damageType}
+            keyRelationships={champ[0].keyRelationships}
+            house={champ[0].house}
             similarites={champ[1]}
-            isColorBlindMode={isColorBlindMode}
-            hideResource={hideResource}
           />
         ))}
       </div>

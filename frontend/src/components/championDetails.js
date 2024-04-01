@@ -7,7 +7,7 @@ export default function ChampionDetails(props) {
   return (
     <div className="container text-center mb-2">
       <div className="row">
-        <div className="col-1">
+        {/* <div className="col-1">
           <img
             id="championImg"
             key={props.championKey}
@@ -16,6 +16,11 @@ export default function ChampionDetails(props) {
             alt={props.championKey}
             className="championData mx-auto"
           />
+        </div> */}
+        <div className="col-1 breakWord">
+        <span className="align-center ">
+            {props.characterName}
+          </span>
         </div>
         <div
           className={
@@ -27,120 +32,111 @@ export default function ChampionDetails(props) {
           id="gender"
         >
           <span className="align-center">
-            {props.gender === 1
-              ? "Male"
-              : props.gender === 2
-              ? "Female"
-              : "Other"}
+            {props.roleJob}
           </span>
         </div>
         <div
           className={
-            "col-1 championData " +
-            (props.similarites.sameResource
-              ? checkColorBlindMode() + "correct"
-              : checkColorBlindMode() + "incorrect")
-          }
-          id="resource"
-        >
-          <span className="align-center">
-            {props.hideResource
-              ? props.resource === "Mana"
-                ? "Mana"
-                : "Manaless"
-              : props.resource}
-          </span>
-        </div>
-        <div
-          className={
-            "col-1 championData " +
-            (props.similarites.sameRangeType === "partial"
+            "col-2 championData " +
+            (props.similarites.sameKeyItem === "partial"
               ? checkColorBlindMode() + "partial"
-              : props.similarites.sameRangeType
+              : props.similarites.sameKeyItem
               ? checkColorBlindMode() + "correct"
               : checkColorBlindMode() + "incorrect")
           }
           id="range"
         >
           <span className="align-center">
-            {props.rangeTypes.replace(/,/g, " ")}
+            {props.keyItem}
+          </span>
+        </div>
+        <div
+          className={
+            "col-1 championData " +
+            (props.similarites.sameLoyalty
+              ? checkColorBlindMode() + "correct"
+              : checkColorBlindMode() + "incorrect")
+          }
+          id="resource"
+        >
+          <span className="align-center">
+            {props.loyalty}
           </span>
         </div>
         <div
           className={
             "col-2 championData " +
-            (props.similarites.sameGenre === "partial"
+            (props.similarites.sameMagicalAbility === "partial"
               ? checkColorBlindMode() + "partial"
-              : props.similarites.sameGenre
+              : props.similarites.sameMagicalAbility
               ? checkColorBlindMode() + "correct"
               : checkColorBlindMode() + "incorrect")
           }
           id="genre"
         >
           <span className="align-center breakWord">
-            {props.genre.replace(/,/g, " ")}
-          </span>
-        </div>
-        <div
-          className={
-            "col-2 championData " +
-            (props.similarites.samePosition === "partial"
-              ? checkColorBlindMode() + "partial"
-              : props.similarites.samePosition
-              ? checkColorBlindMode() + "correct"
-              : checkColorBlindMode() + "incorrect")
-          }
-          id="position"
-        >
-          <span className="align-center breakWord">
-            {props.positions.replace(/,/g, " ")}
+            {props.magicalAbility}
           </span>
         </div>
         <div
           className={
             "col-1 championData " +
-            (props.similarites.sameReleaseYear === "="
+            (props.similarites.sameFirstAppearance === "="
               ? checkColorBlindMode() + "correct"
-              : props.similarites.sameReleaseYear === "<"
+              : props.similarites.sameFirstAppearance === "<"
               ? checkColorBlindMode() + "incorrect-less"
-              : props.similarites.sameReleaseYear === ">"
+              : props.similarites.sameFirstAppearance === ">"
               ? checkColorBlindMode() + "incorrect-greater"
               : "")
           }
           id="released"
         >
-          <span className="align-center">{props.releaseYear}</span>
-        </div>
-        <div
-          className={
-            "col-2 championData " +
-            (props.similarites.sameRegion === "partial"
-              ? checkColorBlindMode() + "partial"
-              : props.similarites.sameRegion
-              ? checkColorBlindMode() + "correct"
-              : checkColorBlindMode() + "incorrect")
-          }
-          id="region"
-        >
-          <span className="align-center regionText">
-            {props.regions.replace(/,/g, "\n")}
-          </span>
+          <span className="align-center">{props.firstAppearanceBookNumber}</span>
         </div>
         <div
           className={
             "col-1 championData " +
-            (props.similarites.sameDamageType === "partial"
-              ? checkColorBlindMode() + "partial"
-              : props.similarites.sameDamageType
+            (props.similarites.sameGender
               ? checkColorBlindMode() + "correct"
               : checkColorBlindMode() + "incorrect")
           }
-          id="region"
+          id="resource"
         >
           <span className="align-center">
-            {props.damageType.replace(/,/g, " ")}
+            {props.gender}
           </span>
         </div>
+
+        <div
+          className={
+            "col-2 championData " +
+            (props.similarites.sameKeyRelationship === "partial"
+              ? checkColorBlindMode() + "partial"
+              : props.similarites.sameKeyRelationship
+              ? checkColorBlindMode() + "correct"
+              : checkColorBlindMode() + "incorrect")
+          }
+          id="genre"
+        >
+          <span className="align-center breakWord">
+            {props.keyRelationships}
+          </span>
+        </div>
+
+        <div
+          className={
+            "col-1 championData " +
+            (props.similarites.sameHouse
+              ? checkColorBlindMode() + "correct"
+              : checkColorBlindMode() + "incorrect")
+          }
+          id="resource"
+        >
+          <span className="align-center">
+            {props.house}
+          </span>
+        </div>
+        
       </div>
     </div>
   );

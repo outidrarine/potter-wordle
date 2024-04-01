@@ -1,12 +1,20 @@
 {
     "configurations": [
         {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}"
+          },
+
+        {
             "type": "aws-sam",
             "request": "direct-invoke",
             "name": "lambda-nodejs18.x:HelloWorldFunction (nodejs18.x)",
             "invokeTarget": {
                 "target": "template",
-                "templatePath": "${workspaceFolder}/lambda-nodejs18.x/template.yaml",
+                "templatePath": "${workspaceFolder}/backend/serverless.yml",
                 "logicalId": "HelloWorldFunction"
             },
             "lambda": {
@@ -21,7 +29,7 @@
             "name": "API lambda-nodejs18.x:HelloWorldFunction (nodejs18.x)",
             "invokeTarget": {
                 "target": "api",
-                "templatePath": "${workspaceFolder}/lambda-nodejs18.x/template.yaml",
+                "templatePath": "${workspaceFolder}/backend/serverless.yml",
                 "logicalId": "HelloWorldFunction"
             },
             "api": {

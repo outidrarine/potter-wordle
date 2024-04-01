@@ -5,8 +5,9 @@ const router = express.Router();
 const championController = require("../controllers/championController");
 const itemController = require("../controllers/itemController");
 const oldItemController = require("../controllers/oldItemController");
+const hpGuessController = require("../controllers/hpGuessController")
 
-router.post("/guess", championController.Guess);
+router.post("/guess", hpGuessController.Guess);
 router.post("/splash", championController.GuessSplash);
 
 router.post("/item", itemController.GuessItem);

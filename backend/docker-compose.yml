@@ -46,29 +46,3 @@ services:
       interval: 15s
       timeout: 5s
       retries: 1
-
-  loldle-mysql:
-    build:
-      context: ./mysql-docker
-      dockerfile: Dockerfile
-    image: ${DOCKER_REGISTRY}/loldle-mysql
-    container_name: loldle-mysql
-    ports:
-      - "127.0.0.1:3306:3306"
-    restart: unless-stopped
-    environment:
-      - MYSQL_DATABASE=${DB_DATABASE}
-      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
-    volumes:
-      - loldle-mysql:/var/lib/mysql
-    healthcheck:
-      test: mysqladmin ping -h 127.0.0.1 -u root --password=$DB_PASSWORD
-      start_period: 10s
-      interval: 10s
-      timeout: 5s
-      retries: 10
-    networks:
-      - mynetwork
-
-volumes:
-  loldle-mysql:

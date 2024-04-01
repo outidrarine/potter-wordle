@@ -5,31 +5,31 @@ export default function GameTitle() {
     <div className="container text-center" id="gameTitle">
         <div className="row">
             <div className="col-1">
-                <p>Champion</p>
+                <p>character Name</p>
+            </div>
+            <div className="col-1">
+                <p>role Job</p>
+            </div>
+            <div className="col-2">
+                <p>key Item</p>
+            </div>
+            <div className="col-1">
+                <p>Loyalty</p>
+            </div>
+            <div className="col-2">
+                <p>Magical Ability</p>
+            </div>
+            <div className="col-1">
+                <p>Book Appearance</p>
             </div>
             <div className="col-1">
                 <p>Gender</p>
             </div>
-            <div className="col-1">
-                <p>Resource</p>
-            </div>
-            <div className="col-1">
-                <p>Range type</p>
-            </div>
             <div className="col-2">
-                <p>Genre(s)</p>
-            </div>
-            <div className="col-2">
-                <p>Postion(s)</p>
+                <p>Key Relationships</p>
             </div>
             <div className="col-1">
-                <p>Released</p>
-            </div>
-            <div className="col-2">
-                <p>Region(s)</p>
-            </div>
-            <div className="col-1">
-                <p>Damage Type</p>
+                <p>House</p>
             </div>
 
         </div>
