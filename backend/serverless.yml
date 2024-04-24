@@ -98,7 +98,17 @@ functions:
 
 #    Define function environment variables here
     environment:
-
+      variable2: value2
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_DATABASE: ${DB_DATABASE}
+      TOKEN: ${TOKEN} # used only for importing data to database
+      NODE_ENV: ${NODE_ENV} # used only for importing data to database otherwise use production
+      ENV: ${ENV} # used only for importing data to database otherwise use production
+      DOCKER_REGISTRY: ${DOCKER_REGISTRY}
+      
 
 
 # you can add CloudFormation resource templates here
