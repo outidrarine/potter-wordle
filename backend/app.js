@@ -33,7 +33,6 @@ const token = require("./middleware/token");
 const requestTracker = require("./middleware/requestTracker");
 const waf = require("./middleware/waf");
 
-const championRoutes = require("./routes/championRoutes");
 const userRoutes = require("./routes/userRoutes");
 const createUserRoutes = require("./routes/createUserRoutes");
 const gameRoutes = require("./routes/gameRoutes");
@@ -54,7 +53,5 @@ app.use(requestTracker.trackDAU);
 
 app.use("/api", userRoutes);
 app.use("/api", guessRoutes);
-
-app.use("/dev/api/", auth, championRoutes);
 
 module.exports = app;
