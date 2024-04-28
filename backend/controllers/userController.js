@@ -5,6 +5,7 @@ const oldItem = require("../models/oldItemModel");
 const crypto = require("crypto");
 const cache = require("../middleware/cache");
 const oldItemModel = require("../models/oldItemModel");
+const hpCharacter = require("../models/hpCharacterModel");
 
 const Create = (req, res) => {
   crypto.randomBytes(46, (err, token) => {
@@ -23,7 +24,7 @@ const Create = (req, res) => {
 
     const country = req.get("cf-ipcountry");
 
-    champion.getAllIds((err, data) => {
+    hpCharacter.getAllIds((err, data) => {
       if (err) {
         console.log(err);
         return res.json({
@@ -243,7 +244,7 @@ const DeleteUser = (req, res) => {
 
 const ChangeChampionGuess = (req, res) => {
   const token = req.token;
-  champion.getAllIds((err, data) => {
+  hpCharacter.getAllIds((err, data) => {
     if (err) {
       console.log(err);
       return res.json({
