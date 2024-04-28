@@ -26,15 +26,7 @@ export default function Victory(props) {
                 <h1 className="pb-3">Victory!</h1>
 
                 <img
-                  src={
-                    (props.isItem
-                      ? "/items/"
-                      : props.isOldItem
-                      ? "/old_items/"
-                      : "/champions/") +
-                    props.championKey +
-                    ".webp"
-                  }
+                  src={"/allHpCharacters/" + props.championKey + ".webp"}
                   alt={props.champion}
                   className="pb-3"
                 />
