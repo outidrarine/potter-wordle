@@ -34,24 +34,6 @@ export default function Header() {
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link" to="/game/splash">
-                Splash
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link className="nav-link" to="/game/item">
-                Item
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link className="nav-link" to="/game/item/legacy">
-                Legacy item
-              </Link>
-            </li>
-
-            <li className="nav-item">
               <Link className="nav-link" to="leaderboard">
                 Leaderboard
               </Link>

@@ -34,8 +34,6 @@ const requestTracker = require("./middleware/requestTracker");
 const waf = require("./middleware/waf");
 
 const championRoutes = require("./routes/championRoutes");
-const itemRoutes = require("./routes/itemRoutes");
-const oldItemRoutes = require("./routes/oldItemRoutes");
 const userRoutes = require("./routes/userRoutes");
 const createUserRoutes = require("./routes/createUserRoutes");
 const gameRoutes = require("./routes/gameRoutes");
@@ -58,7 +56,5 @@ app.use("/api", userRoutes);
 app.use("/api", guessRoutes);
 
 app.use("/dev/api/", auth, championRoutes);
-app.use("/dev/api/", auth, itemRoutes);
-app.use("/dev/api/", auth, oldItemRoutes);
 
 module.exports = app;
