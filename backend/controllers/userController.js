@@ -1,10 +1,7 @@
 const user = require("../models/userModel");
 const champion = require("../models/championModel");
-const item = require("../models/itemModel");
-const oldItem = require("../models/oldItemModel");
 const crypto = require("crypto");
 const cache = require("../middleware/cache");
-const oldItemModel = require("../models/oldItemModel");
 const hpCharacter = require("../models/hpCharacterModel");
 
 const Create = (req, res) => {
@@ -41,78 +38,28 @@ const Create = (req, res) => {
 
       const currentSplashChampion = data[randomSplash];
 
-      item.getAllIds((err, itemData) => {
+      if (!nickname) {
+        nickname = "Teemo#" + Math.floor(Math.random() * 9999);
+      }
+
+      const userData = {
+        nickname: nickname,
+        token: token,
+        currentChampion: currentChampion["id"],
+        timestamp: new Date().toLocaleDateString("en"),
+        country: country,
+      };
+
+      user.create(userData, (err, result) => {
         if (err) {
           console.log(err);
           return res.json({
             status: "error",
-            message: "Error on fetching item ids",
+            message: "Error on fetching ids",
           });
         }
 
-        const randomItemIdx = Math.floor(Math.random() * itemData.length);
-
-        const currentItemId = itemData[randomItemIdx];
-
-        if (!nickname) {
-          nickname = "Teemo#" + Math.floor(Math.random() * 9999);
-        }
-
-        champion.getSplashById(currentSplashChampion["id"], (err, result) => {
-          if (err) {
-            console.log(err);
-            return res.json({
-              status: "error",
-              message: "Error on fetching splash art ids",
-            });
-          }
-
-          const sprites = result[0]["spriteIds"].split(",");
-
-          const randomSpriteId = Math.floor(Math.random() * sprites.length);
-
-          const randomSprite = sprites[randomSpriteId];
-
-          oldItem.getAllIds((err, oldItemData) => {
-            if (err) {
-              console.log(err);
-              return res.json({
-                status: "error",
-                message: "Error on fetching old item ids",
-              });
-            }
-
-            const randomOldItemIdx = Math.floor(
-              Math.random() * oldItemData.length
-            );
-
-            const currentOldItemId = oldItemData[randomOldItemIdx];
-
-            const userData = {
-              nickname: nickname,
-              token: token,
-              currentChampion: currentChampion["id"],
-              currentSplashChampion: currentSplashChampion["id"],
-              currentSplashId: parseInt(randomSprite),
-              timestamp: new Date().toLocaleDateString("en"),
-              country: country,
-              currentItemId: currentItemId["itemId"],
-              currentOldItemId: currentOldItemId["id"],
-            };
-
-            user.create(userData, (err, result) => {
-              if (err) {
-                console.log(err);
-                return res.json({
-                  status: "error",
-                  message: "Error on fetching ids",
-                });
-              }
-
-              res.json({ status: "success", token: token });
-            });
-          });
-        });
+        res.json({ status: "success", token: token });
       });
     });
   });
@@ -132,12 +79,6 @@ const CheckToken = (req, res) => {
   user.fetchByTokenForUserDataAPI(token, (err, result) => {
     if (result && result[0][0]) {
       delete result[0][0]["solvedChampions"];
-      delete result[0][0]["currentSplashChampion"];
-      delete result[0][0]["solvedSplashChampions"];
-      delete result[0][0]["solvedItemIds"];
-      delete result[0][0]["currentItemId"];
-      delete result[0][0]["currentOldItemId"];
-      delete result[0][0]["solvedOldItemIds"];
 
       result[0][0]["user_rank"] = result[1][0]
         ? result[1][0]["user_rank"]
@@ -316,235 +257,6 @@ const ChangeChampionGuess = (req, res) => {
   });
 };
 
-const ChangeSplashGuess = (req, res) => {
-  const token = req.token;
-  champion.getAllIds((err, data) => {
-    if (err) {
-      console.log(err);
-      return res.json({
-        status: "error",
-        message: "Error on fetching champions ids",
-      });
-    }
-
-    user.fetchByToken(token, (err, userResult) => {
-      if (err) {
-        console.log(err);
-        return res.json({
-          status: "error",
-          message: "Error on fetching data with the token provided",
-        });
-      }
-
-      let solvedChampions = userResult[0]["solvedSplashChampions"];
-      let solvedChamps, champPool;
-      if (solvedChampions) {
-        if (
-          solvedChampions.length > 1 &&
-          solvedChampions.split(",").length > 1 &&
-          solvedChampions.split(",").length < data.length
-        ) {
-          solvedChamps = solvedChampions.split(",");
-        } else if (
-          solvedChampions.length > 1 &&
-          solvedChampions.split(",").length >= data.length
-        ) {
-          solvedChamps = "";
-          solvedChampions = "";
-
-          userResult[0]["prestige"]++;
-        } else {
-          solvedChamps = solvedChampions.toString();
-        }
-
-        // remove solved champs from the all champions pool
-        champPool = data.filter((id) => {
-          return !solvedChamps.includes(id["id"].toString());
-        });
-      } else {
-        champPool = data.filter((id) => {
-          return id;
-        });
-      }
-
-      const random = Math.floor(Math.random() * champPool.length);
-
-      const newChampion = champPool[random];
-
-      champion.getSplashById(newChampion["id"], (err, result) => {
-        const sprites = result[0]["spriteIds"].split(",");
-
-        const random = Math.floor(Math.random() * sprites.length);
-
-        const randomSprite = sprites[random];
-
-        let payload = {
-          currentSplashChampion: newChampion["id"],
-          solvedSplashChampions: solvedChampions,
-          currentSplashId: parseInt(randomSprite),
-          prestige: userResult[0]["prestige"],
-          score: userResult[0]["score"],
-          token: token,
-        };
-
-        user.updateSplash(payload, (err, result) => {
-          if (err) {
-            console.log(err);
-            return res.json({
-              status: "error",
-              message: "Error on updating user data",
-            });
-          }
-
-          res.json({
-            status: "success",
-            message: "Changed splash guess",
-          });
-        });
-      });
-    });
-  });
-};
-const ChangeItemGuess = (req, res) => {
-  const token = req.token;
-  item.getAllIds((err, itemData) => {
-    if (err) {
-      console.log(err);
-      return res.json({
-        status: "error",
-        message: "Error on fetching item ids",
-      });
-    }
-
-    user.fetchByToken(token, (err, userResult) => {
-      if (err) {
-        console.log(err);
-        return res.json({
-          status: "error",
-          message: "Error on fetching data with the token provided",
-        });
-      }
-
-      let solvedItemIds = userResult[0]["solvedItemIds"];
-
-      let solvedItemsArray, itemPool;
-      if (solvedItemIds) {
-        if (solvedItemIds && solvedItemIds.length > 1) {
-          solvedItemsArray = solvedItemIds.split(",");
-        } else {
-          solvedItemsArray = solvedItemIds.toString();
-        }
-        itemPool = itemData.filter((item) => {
-          return !solvedItemsArray.includes(item["itemId"].toString());
-        });
-      } else {
-        itemPool = itemData.map((item) => {
-          return item;
-        });
-      }
-      // TODO: add prestige stuff
-
-      const random = Math.floor(Math.random() * itemPool.length);
-
-      const newItem = itemPool[random];
-
-      const payload = {
-        currentItemId: newItem["itemId"],
-        solvedItemIds: solvedItemsArray ? solvedItemsArray.toString() : null,
-        score: userResult[0]["score"],
-        prestige: userResult[0]["prestige"],
-        token: token,
-      };
-
-      user.updateItem(payload, (err, result) => {
-        if (err) {
-          console.log(err);
-          return res.json({
-            status: "error",
-            message: "Error on updating user data",
-          });
-        }
-
-        res.json({
-          status: "success",
-          message: "Changed item guess",
-        });
-      });
-    });
-  });
-};
-const ChangeoldItemGuess = (req, res) => {
-  const token = req.token;
-
-  // correct guess
-
-  oldItemModel.getAllIds((err, itemData) => {
-    if (err) {
-      console.log(err);
-      return res.json({
-        status: "error",
-        message: "Error on fetching item ids",
-      });
-    }
-
-    user.fetchByToken(token, (err, userResult) => {
-      if (err) {
-        console.log(err);
-        return res.json({
-          status: "error",
-          message: "Error on fetching data with the token provided",
-        });
-      }
-
-      let solvedItemIds = userResult[0]["solvedOldItemIds"];
-      let solvedItemsArray, itemPool;
-
-      if (solvedItemIds) {
-        if (solvedItemIds && solvedItemIds.length > 1) {
-          solvedItemsArray = solvedItemIds.split(",");
-        } else if (!solvedItemIds) {
-          solvedItemsArray = "";
-        } else {
-          solvedItemsArray = solvedItemIds.toString();
-        }
-        itemPool = itemData.filter((item) => {
-          return !solvedItemsArray.includes(item["id"].toString());
-        });
-      } else {
-        itemPool = itemData.map((item) => {
-          return item;
-        });
-      }
-
-      const random = Math.floor(Math.random() * itemPool.length);
-
-      const newItem = itemPool[random];
-
-      const payload = {
-        currentOldItemId: newItem["id"],
-        solvedOldItemIds: solvedItemsArray ? solvedItemsArray.toString() : null,
-        score: userResult[0]["score"],
-        prestige: userResult[0]["prestige"],
-        token: token,
-      };
-
-      user.updateOldItem(payload, (err, result) => {
-        if (err) {
-          console.log(err);
-          return res.json({
-            status: "error",
-            message: "Error on updating user data",
-          });
-        }
-
-        res.json({
-          status: "success",
-          message: "Changed old item guess",
-        });
-      });
-    });
-  });
-};
 module.exports = {
   Create,
   CheckToken,
@@ -552,7 +264,4 @@ module.exports = {
   DeleteUser,
   ChangeCountry,
   ChangeChampionGuess,
-  ChangeSplashGuess,
-  ChangeItemGuess,
-  ChangeoldItemGuess,
 };
