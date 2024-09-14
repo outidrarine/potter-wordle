@@ -14,7 +14,7 @@ const GetPartialSimilarites = (currentGuess, correctChampion) => {
     }
 
     if (matches === guessPos.length) {
-      return true;
+      return { match: true, attribute: guessPos[0] };
     }
   }
 
@@ -22,13 +22,18 @@ const GetPartialSimilarites = (currentGuess, correctChampion) => {
   for (let i = 0; i < guessPos.length; i++) {
     for (let j = 0; j < correctPos.length; j++) {
       if (guessPos[i] === correctPos[j]) {
-        return "partial";
+        return { match: true, attribute: guessPos[i] };
       }
     }
   }
 
   // no matches at all
-  return false;
+  return { match: false, attribute: guessPos[0] };
+};
+
+const GetSimilarAttribute = (currentGuess, correctChampion) => {
+  const currGuess = currentGuess.split(",").sort();
+  const corrGuess = correctChampion.split(",").sort();
 };
 
 module.exports = {

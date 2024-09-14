@@ -9,10 +9,12 @@
     "deploy": "serverless deploy"
   },
   "dependencies": {
+    "backend": "file:",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "~4.16.1",
     "express-rate-limit": "^6.7.0",
+    "graceful-fs": "^4.2.11",
     "helmet": "^5.1.1",
     "jsonwebtoken": "^8.5.1",
     "morgan": "~1.9.1",

@@ -6,3 +6,4 @@
 ./populateDBScripts/.env
 *.key
 *.pem
+./configs/ca.pem
