@@ -181,7 +181,7 @@ export default function Game() {
         </form>
       </div>
 
-      {champions.length > 0 ? <Titles /> : ""}
+      {champions.length > 0 ? /*<Titles />*/ "" : ""}
 
       <div id="champions">
         {champions.map((champ) => (
