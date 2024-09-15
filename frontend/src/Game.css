@@ -12,6 +12,7 @@ span {
   font-size: 0.8em;
   margin: auto;
 }
+
 p,
 small {
   font-family: Spiegel;
@@ -49,12 +50,11 @@ small {
   padding-top: 50%;
   padding-bottom: 50%;
   position: relative;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   border: 1px solid hsla(0, 0%, 100%, 0.59);
+  line-height: 0.8em;
 }
 
 .championData:first-child {
@@ -213,7 +213,17 @@ small {
   flex: 1;
   font-family: "Beaufort for LOL";
 }
-
+.answercontainer {
+  overflow-x: auto;
+}
+@media only screen and (max-width: 768px) {
+  .championData {
+    min-width: 4em;
+  }
+  .currentAnswer {
+    min-width: 4em;
+  }
+}
 @media only screen and (min-width: 600px) {
   .container,
   .container-md,

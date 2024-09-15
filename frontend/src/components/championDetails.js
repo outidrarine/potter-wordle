@@ -5,9 +5,9 @@ export default function ChampionDetails(props) {
     return props.isColorBlindMode ? "cb-" : "";
   };
   return (
-    <div className=" text-center mb-2">
-      <div className="d-flex justify-content-center ">
-        <div className="col-1 breakWord  partial">
+    <div className=" text-center mb-2  answercontainer">
+      <div className="d-flex justify-content-sm-center ">
+        <div className="col-sm-1 currentAnswer partial">
           <div className="squareboxe">
             <div className="">
               <span className="align-center ">{props.characterName}</span>
@@ -16,7 +16,7 @@ export default function ChampionDetails(props) {
         </div>
         <div
           className={
-            "col-1 championData " +
+            "col-sm-1 championData " +
             (props.similarites.sameGender
               ? checkColorBlindMode() + "correct"
               : checkColorBlindMode() + "incorrect")
@@ -31,7 +31,7 @@ export default function ChampionDetails(props) {
         </div>
         <div
           className={
-            "col-1 championData " +
+            "col-sm-1 championData " +
             (props.similarites.sameKeyItem === "partial"
               ? checkColorBlindMode() + "partial"
               : props.similarites.sameKeyItem
@@ -48,7 +48,7 @@ export default function ChampionDetails(props) {
         </div>
         <div
           className={
-            "col-1 championData " +
+            "col-sm-1 championData " +
             (props.similarites.sameLoyalty
               ? checkColorBlindMode() + "correct"
               : checkColorBlindMode() + "incorrect")
@@ -63,7 +63,7 @@ export default function ChampionDetails(props) {
         </div>
         <div
           className={
-            "col-1 championData " +
+            "col-sm-1 championData " +
             (props.similarites.sameMagicalAbility === "partial"
               ? checkColorBlindMode() + "partial"
               : props.similarites.sameMagicalAbility
@@ -74,15 +74,13 @@ export default function ChampionDetails(props) {
         >
           <div className="squareboxe">
             <div className="">
-              <span className="align-center breakWord">
-                {props.magicalAbility}
-              </span>
+              <span className="align-center ">{props.magicalAbility}</span>
             </div>
           </div>
         </div>
         <div
           className={
-            "col-1 championData " +
+            "col-sm-1 championData " +
             (props.similarites.sameFirstAppearance === "="
               ? checkColorBlindMode() + "correct"
               : props.similarites.sameFirstAppearance === "<"
@@ -103,7 +101,7 @@ export default function ChampionDetails(props) {
         </div>
         <div
           className={
-            "col-1 championData " +
+            "col-sm-1 championData " +
             (props.similarites.sameGender
               ? checkColorBlindMode() + "correct"
               : checkColorBlindMode() + "incorrect")
@@ -119,7 +117,7 @@ export default function ChampionDetails(props) {
 
         <div
           className={
-            "col-1 championData " +
+            "col-sm-1 championData " +
             (props.similarites.sameKeyRelationship === "partial"
               ? checkColorBlindMode() + "partial"
               : props.similarites.sameKeyRelationship
@@ -130,16 +128,14 @@ export default function ChampionDetails(props) {
         >
           <div className="squareboxe">
             <div className="">
-              <span className="align-center breakWord">
-                {props.keyRelationships}
-              </span>
+              <span className="align-center">{props.keyRelationships}</span>
             </div>
           </div>
         </div>
 
         <div
           className={
-            "col-1 championData " +
+            "col-sm-1 championData " +
             (props.similarites.sameHouse
               ? checkColorBlindMode() + "correct"
               : checkColorBlindMode() + "incorrect")
