@@ -113,16 +113,14 @@ export default function Game() {
   return (
     <div className="container main pt-4 pb-5 mb-5">
       <Helmet>
-        <title>
-          Infiniteloldle - Ultimate LoL quiz - Champion guessing game
-        </title>
+        <title>Wizardle - Ultimate Harry Potter wizards gussing game</title>
         <meta
           name="description"
           content="The ultimate quiz game for League of Legends enthusiasts. Guess League of Legends champions infinitely."
         />
       </Helmet>
 
-      <h3 className="text-center pb-3">Start guessing your champion</h3>
+      <h3 className="text-center pb-3">Start guessing your Wizard</h3>
 
       <div className="d-flex justify-content-center mt-4 mb-3">
         <form
@@ -136,7 +134,7 @@ export default function Game() {
             onChange={(selectedOption) => setGuess(selectedOption.value)}
             isDisabled={correctGuess}
             styles={SelectStyles}
-            placeholder="Type champions name"
+            placeholder="Type Wizard's name"
             filterOption={customFilterOption}
             formatOptionLabel={(data) => (
               <div className="select-option">
@@ -181,24 +179,26 @@ export default function Game() {
         </form>
       </div>
 
-      {champions.length > 0 ? /*<Titles />*/ "" : ""}
-
       <div id="champions">
-        {champions.map((champ) => (
-          <ChampionDetails
-            key={champ[0].characterName}
-            characterName={champ[0].characterName}
-            roleJob={champ[0].roleJob}
-            keyItem={champ[0].keyItem}
-            loyalty={champ[0].loyalty}
-            magicalAbility={champ[0].magicalAbility}
-            firstAppearanceBookNumber={champ[0].firstAppearanceBookNumber}
-            gender={champ[0].gender}
-            keyRelationships={champ[0].keyRelationships}
-            house={champ[0].house}
-            similarites={champ[1]}
-          />
-        ))}
+        <div className=" text-center mb-2  answercontainer">
+          {champions.length > 0 ? <Titles /> : ""}
+
+          {champions.map((champ) => (
+            <ChampionDetails
+              key={champ[0].characterName}
+              characterName={champ[0].characterName}
+              roleJob={champ[0].roleJob}
+              keyItem={champ[0].keyItem}
+              loyalty={champ[0].loyalty}
+              magicalAbility={champ[0].magicalAbility}
+              firstAppearanceBookNumber={champ[0].firstAppearanceBookNumber}
+              gender={champ[0].gender}
+              keyRelationships={champ[0].keyRelationships}
+              house={champ[0].house}
+              similarites={champ[1]}
+            />
+          ))}
+        </div>
       </div>
 
       {correctGuess ? (

@@ -29,7 +29,7 @@ export default function Header() {
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link className="nav-link" to="/">
-                Champions
+                Wizards
               </Link>
             </li>
 
