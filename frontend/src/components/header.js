@@ -10,7 +10,7 @@ export default function Header() {
       <div className="container-fluid">
         <img src={"/favicon.webp"} className="m-2" alt="Logo" />
         <Link className="navbar-brand" to="/">
-          Infiniteloldle
+          Wizardle
         </Link>
 
         <button
@@ -27,12 +27,6 @@ export default function Header() {
 
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link className="nav-link" to="/">
-                Wizards
-              </Link>
-            </li>
-
             <li className="nav-item">
               <Link className="nav-link" to="leaderboard">
                 Leaderboard

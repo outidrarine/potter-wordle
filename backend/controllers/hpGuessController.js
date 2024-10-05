@@ -254,7 +254,7 @@ const Guess = (req, res) => {
               res.json({
                 status: "success",
                 correctGuess: true,
-                properties: [guessHpCharacterData, similarites],
+                properties: [hpCharacterData, similarites],
                 title: correctHpCharacterData[0].title,
               });
             });

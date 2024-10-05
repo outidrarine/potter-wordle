@@ -26,9 +26,9 @@ export default function Victory(props) {
                 <h1 className="pb-3">Victory!</h1>
 
                 <img
-                  src={"/allHpCharacters/" + props.championKey + ".webp"}
+                  src={"/win.png"}
                   alt={props.champion}
-                  className="pb-3"
+                  className="pb-3 victoryIcon"
                 />
 
                 <h2>{props.champion}</h2>

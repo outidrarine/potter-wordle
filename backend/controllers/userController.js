@@ -19,7 +19,7 @@ const Create = (req, res) => {
       nickname = nickname.substring(0, 30);
     }
 
-    const country = req.get("cf-ipcountry");
+    const country = req.get("CloudFront-Viewer-Country");
 
     hpCharacter.getAllIds((err, data) => {
       if (err) {
@@ -39,7 +39,7 @@ const Create = (req, res) => {
       const currentSplashChampion = data[randomSplash];
 
       if (!nickname) {
-        nickname = "Teemo#" + Math.floor(Math.random() * 9999);
+        nickname = "Wizard#" + Math.floor(Math.random() * 9999);
       }
 
       const userData = {

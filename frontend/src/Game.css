@@ -53,8 +53,15 @@ small {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: inset 0 0 6px #000;
   border: 1px solid hsla(0, 0%, 100%, 0.59);
   line-height: 0.8em;
+}
+
+.victoryIcon {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .championData:first-child {
