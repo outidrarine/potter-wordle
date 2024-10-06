@@ -59,33 +59,6 @@ export default function Header() {
                   <Tooltip id="legal-tooltip" />
                 </li>
               </button>
-              <button
-                className="btn btn-dark darkBtn p-2 pb-0"
-                data-tooltip-id="stats-tooltip"
-                data-tooltip-content="My stats"
-              >
-                <li className="nav-item">
-                  <Link className="nav-link" to="stats/me">
-                    <span className="material-symbols-outlined">trophy</span>
-                    <Tooltip id="stats-tooltip" />
-                  </Link>
-                </li>
-              </button>
-              <button
-                className="btn btn-dark darkBtn p-2 pb-0"
-                data-tooltip-id="data-tooltip"
-                data-tooltip-content="Global statistics"
-              >
-                <li className="nav-item">
-                  <Link className="nav-link" to="stats">
-                    <span className="material-symbols-outlined">
-                      monitoring
-                    </span>
-                    <Tooltip id="data-tooltip" />
-                  </Link>
-                </li>
-              </button>
-              <Modifications />
               <Settings />
             </div>
           </ul>

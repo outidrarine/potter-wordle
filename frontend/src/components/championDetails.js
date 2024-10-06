@@ -83,14 +83,25 @@ export default function ChampionDetails(props) {
           (props.similarites.sameFirstAppearance === "="
             ? checkColorBlindMode() + "correct"
             : props.similarites.sameFirstAppearance === "<"
-            ? checkColorBlindMode() + "incorrect-less"
+            ? checkColorBlindMode() + "incorrect"
             : props.similarites.sameFirstAppearance === ">"
-            ? checkColorBlindMode() + "incorrect-greater"
+            ? checkColorBlindMode() + "incorrect"
             : "")
         }
         id="released"
       >
-        <div className="squareboxe">
+        <div
+          className={
+            "squareboxe " +
+            (props.similarites.sameFirstAppearance === "="
+              ? checkColorBlindMode() + "correct"
+              : props.similarites.sameFirstAppearance === "<"
+              ? checkColorBlindMode() + "square-inferior"
+              : props.similarites.sameFirstAppearance === ">"
+              ? checkColorBlindMode() + "square-superior"
+              : "")
+          }
+        >
           <div>
             <span className="align-center">
               {props.firstAppearanceBookNumber}
@@ -109,7 +120,9 @@ export default function ChampionDetails(props) {
       >
         <div className="squareboxe">
           <div className="">
-            <span className="align-center">{props.gender}</span>
+            <span className="align-center">
+              {props.gender === 0 ? "Female" : "Male"}
+            </span>
           </div>
         </div>
       </div>

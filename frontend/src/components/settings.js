@@ -165,31 +165,13 @@ export default function Settings() {
                     </div>
                   </div>
 
-                  <h4 className="p-2">Reroll</h4>
+                  <h4 className="p-2">Reroll Wizards</h4>
                   <div className="pb-4 d-flex justify-content-center gap-2">
                     <button
                       onClick={ChangeGuessChampion}
                       className="btn btn-dark mb-2"
                     >
-                      Champion
-                    </button>
-                    <button
-                      onClick={ChangeGuessSplash}
-                      className="btn btn-dark mb-2"
-                    >
-                      Splash art
-                    </button>
-                    <button
-                      onClick={ChangeGuessItem}
-                      className="btn btn-dark mb-2"
-                    >
-                      Item
-                    </button>
-                    <button
-                      onClick={ChangeGuessOldItem}
-                      className="btn btn-dark mb-2"
-                    >
-                      Legacy item
+                      Reroll
                     </button>
                   </div>
 

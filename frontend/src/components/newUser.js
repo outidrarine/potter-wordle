@@ -36,7 +36,7 @@ export default function NewUser() {
     (!localStorage.getItem("token") && localStorage.getItem("createNewUser")) ||
     (!localStorage.getItem("token") && !localStorage.getItem("userDeleted"))
   ) {
-    const nickname = "Teemo#" + Math.floor(Math.random() * 9999);
+    const nickname = "Wizard#" + Math.floor(Math.random() * 9999);
     axios
       .post(Config.url + "/user", { nickname })
       .then((response) => {

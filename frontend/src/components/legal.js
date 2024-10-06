@@ -9,34 +9,26 @@ export default function Legal() {
       <div id="disclaimer">
         <h2>Disclaimer</h2>
         <p>
-          Infiniteloldle.com isn't endorsed by Riot Games and doesn't reflect
-          the views or opinions of Riot Games or anyone officially involved in
-          producing or managing Riot Games properties. Riot Games, and all
-          associated properties are trademarks or registered trademarks of Riot
-          Games, Inc.
-        </p>
-        <p>
-          Infiniteloldle.com was created under Riot Games'{" "}
-          <a href="https://www.riotgames.com/en/legal">"Legal Jibber Jabber"</a>{" "}
-          policy using assets owned by Riot Games. Riot Games does not endorse
-          or sponsor this project.
+          wizardle is a fan-made game inspired by the Harry Potter universe. It
+          is created purely for entertainment purposes and respects the
+          copyrights and intellectual property of J.K. Rowling, Warner Bros.,
+          and other rights holders. We do not claim ownership of any characters,
+          names, or concepts from the Harry Potter series. All rights belong to
+          their respective owners.
         </p>
       </div>
 
       <div id="privacy">
         <h2>Privacy Policy</h2>
-        <p>Effective Date: 21.05.2023</p>
+        <p>Effective Date: 10.06.2024</p>
         <p>
-          This Privacy Policy describes how Infiniteloldle.com ("we," "us," or
-          "our") collects, uses, stores, and protects the personal information
-          of users ("you", "user" or "users") who interact with our website and
-          services. By accessing or using Infiniteloldle.com, you acknowledge
-          and agree to the practices described in this Privacy Policy.
+          By accessing or using wizardle.pegmy.com, you acknowledge and consent
+          to the practices described in this Privacy Policy.
         </p>
         <h3>Information We Collect</h3>
         <h5>1. Account Registration Information</h5>
         <p>
-          When you register an account on Infiniteloldle.com, we collect the
+          When you create an account on wizardle.pegmy.com, we collect the
           following information:
         </p>
         <ul>
@@ -48,8 +40,8 @@ export default function Legal() {
         </ul>
         <h5>2. Automatically Collected Information</h5>
         <p>
-          We may automatically collect certain information about your use of
-          Infiniteloldle.com, including:
+          We may automatically collect certain information about your usage of
+          wizardle.pegmy.com, including:
         </p>
         <ul>
           <li>Timestamp (of the account creation date)</li>
@@ -93,13 +85,6 @@ export default function Legal() {
               <td>
                 Used to instruct browser to not send requests to server trying
                 to verify token that has been verified.
-              </td>
-            </tr>
-            <tr>
-              <td>cf_clearance</td>
-              <td>
-                Used to identify trusted web traffic and distinguish it from
-                malicious traffic on websites protected by Cloudflare.
               </td>
             </tr>
           </tbody>
@@ -371,17 +356,16 @@ export default function Legal() {
         <h3>Third-Party Services</h3>
         <h5>1. Third-Party Analytics</h5>
         <p>
-          We may use third-party analytics tools and services to help us
-          understand how users interact with Infiniteloldle.com. These tools may
-          collect and analyze information about your use of the website,
-          including cookies and usage data, to provide insights and improve our
+          We may employ third-party analytics tools and services to gain
+          insights into user interactions with wizardle.pegmy.com. These tools
+          can collect and analyze data regarding your use of the website,
+          including cookies and usage statistics, to help us improve our
           services.
         </p>
         <p>List of third parties we are using:</p>
         <ul>
           <li>Google Analytics (site analytics)</li>
-          <li>Google AdSense (ads)</li>
-          <li>Cloudflare (security and image caching)</li>
+          <li>Aws CloudFront</li>
         </ul>
         <p>
           Some of these services might be located outside of EU. Their privacy
@@ -389,18 +373,18 @@ export default function Legal() {
         </p>
         <h5>2. Third-Party Links</h5>
         <p>
-          Infiniteloldle.com may contain links to third-party websites or
-          services. We are not responsible for the privacy practices or content
-          of those third-party websites. We encourage you to review the privacy
+          wizardle.pegmy.com may feature links to third-party websites or
+          services. We do not assume responsibility for the privacy practices or
+          content of these external sites. We recommend reviewing the privacy
           policies of any third-party sites you visit.
         </p>
         <h3>Children's Privacy</h3>
         <p>
-          Infiniteloldle.com is not intended for children under the age of 16.
-          We do not knowingly collect personal information from children. If you
-          believe we have inadvertently collected personal information from a
-          child, please contact us immediately, and we will take steps to delete
-          the information promptly.
+          wizardle.pegmy.com is not intended for children under the age of 16.
+          We do not knowingly collect personal information from minors. If you
+          believe we have unintentionally gathered personal information from a
+          child, please contact us immediately, and we will take appropriate
+          measures to delete that information promptly.
         </p>
         <h3>GDPR Compliance</h3>
         <p>
@@ -416,7 +400,7 @@ export default function Legal() {
         <p>
           The California Consumer Privacy Act (CCPA) provides California
           residents with certain rights regarding their personal information.
-          Infiniteloldle.com respects and complies with the CCPA. Below is a
+          wizardle.pegmy.com respects and complies with the CCPA. Below is a
           summary of your CCPA rights:
         </p>
         <ol>
@@ -442,7 +426,7 @@ export default function Legal() {
             <strong>Non-Discrimination: </strong>
             We will not discriminate against you for exercising your CCPA
             rights. However, please note that certain services and features
-            provided by Infiniteloldle.com may require the collection and use of
+            provided by wizardle.pegmy.com may require the collection and use of
             your personal information.
           </li>
         </ol>
@@ -450,7 +434,7 @@ export default function Legal() {
         <p>
           Exercising Your CCPA Rights: If you are a California resident and
           would like to exercise any of your CCPA rights described above, you
-          can contact us at infiniteloldle@gmail.com. Please provide sufficient
+          can contact us at wizardle.pegmy.com. Please provide sufficient
           information to verify your identity and specify the CCPA right you
           wish to exercise. We may need to request additional information to
           verify your request.
@@ -473,15 +457,15 @@ export default function Legal() {
           We may update this Privacy Policy from time to time to reflect changes
           in our practices or legal requirements. We will notify you of any
           material changes by posting the updated Privacy Policy on
-          Infiniteloldle.com. Your continued use of the website after such
+          wizardle.pegmy.com. Your continued use of the website after such
           changes constitutes your acceptance of the revised Privacy Policy.
         </p>
         <h3>Contact Us</h3>
         <p>
           If you have any questions, concerns, or requests regarding this
-          Privacy Policy or the privacy practices of Infiniteloldle.com, please
-          contact us at: <strong>infiniteloldle@gmail.com</strong>.{" "}
-          <CopyToClipboard text="infiniteloldle@gmail.com">
+          Privacy Policy or the privacy practices of wizardle.pegmy.com, please
+          contact us at: <strong>pod24121994@gmail.com</strong>.{" "}
+          <CopyToClipboard text="pod24121994@gmail.com">
             <button
               className="btn btn-outline-dark"
               onClick={() => setIsCopied(true)}
@@ -492,7 +476,7 @@ export default function Legal() {
         </p>
         <p>
           Please review this Privacy Policy carefully. By using
-          Infiniteloldle.com, you consent to the collection, use, and storage of
+          wizardle.pegmy.com, you consent to the collection, use, and storage of
           your personal information as described in this Privacy Policy.
         </p>
         <p>Last edited: 14.6.2023</p>
