@@ -86,7 +86,7 @@ export default function StatsData() {
   if (noData) {
     return (
       <div className="d-flex justify-content-center">
-        <h2>Loading...</h2>
+        <h2>No data available</h2>
       </div>
     );
   }
