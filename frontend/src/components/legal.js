@@ -479,7 +479,6 @@ export default function Legal() {
           wizardle.pegmy.com, you consent to the collection, use, and storage of
           your personal information as described in this Privacy Policy.
         </p>
-        <p>Last edited: 14.6.2023</p>
       </div>
     </div>
   );

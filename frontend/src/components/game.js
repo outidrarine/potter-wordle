@@ -136,6 +136,7 @@ export default function Game() {
             styles={SelectStyles}
             placeholder="Type Wizard's name"
             filterOption={customFilterOption}
+            noOptionsMessage={({ inputValue }) => "Loading..."}
             formatOptionLabel={(data) => (
               <div className="select-option">
                 {/* <LazyLoad offset={200}>
