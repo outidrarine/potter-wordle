@@ -6,7 +6,7 @@ export default function GameTitle() {
       <div className="col-sm-1 currentAnswer ">
         <div className="">
           <div className="">
-            <span className="align-center ">Character Name</span>
+            <span className="align-center ">Wizard Name</span>
           </div>
         </div>
       </div>
@@ -49,14 +49,6 @@ export default function GameTitle() {
         <div className="">
           <div className="">
             <span className="align-center">Gender</span>
-          </div>
-        </div>
-      </div>
-
-      <div className={"col-sm-1 championData "} id="genre">
-        <div className="">
-          <div className="">
-            <span className="align-center">Key Relationship</span>
           </div>
         </div>
       </div>

@@ -183,7 +183,6 @@ export default function Game() {
       <div id="champions">
         <div className=" text-center mb-2  answercontainer">
           {champions.length > 0 ? <Titles /> : ""}
-
           {champions.map((champ) => (
             <ChampionDetails
               key={champ[0].characterName}

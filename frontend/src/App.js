@@ -15,14 +15,8 @@ import MyStats from "./views/myStats";
 import { Provider } from "react-redux";
 import store from "./store/store";
 import ReactGA from "react-ga";
-const TRACKING_ID = "G-50V7BL2Q96"; // OUR_TRACKING_ID
-ReactGA.initialize(TRACKING_ID);
 
 function App() {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
-
   return (
     <Provider store={store}>
       <Header />

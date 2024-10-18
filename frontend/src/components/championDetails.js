@@ -16,7 +16,7 @@ export default function ChampionDetails(props) {
       <div
         className={
           "col-sm-1 championData " +
-          (props.similarites.sameGender
+          (props.similarites.sameJob
             ? checkColorBlindMode() + "correct"
             : checkColorBlindMode() + "incorrect")
         }
@@ -123,24 +123,6 @@ export default function ChampionDetails(props) {
             <span className="align-center">
               {props.gender === 0 ? "Female" : "Male"}
             </span>
-          </div>
-        </div>
-      </div>
-
-      <div
-        className={
-          "col-sm-1 championData " +
-          (props.similarites.sameKeyRelationship === "partial"
-            ? checkColorBlindMode() + "partial"
-            : props.similarites.sameKeyRelationship
-            ? checkColorBlindMode() + "correct"
-            : checkColorBlindMode() + "incorrect")
-        }
-        id="genre"
-      >
-        <div className="squareboxe">
-          <div className="">
-            <span className="align-center">{props.keyRelationships}</span>
           </div>
         </div>
       </div>
