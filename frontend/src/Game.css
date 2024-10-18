@@ -12,7 +12,19 @@ span {
   font-size: 0.8em;
   margin: auto;
 }
+.square-border span {
+  font-size: 0.6em;
+}
+.closebutton {
+  right: -12px;
+  top: -20px;
 
+  background: #ad1d1d;
+  border: 2px solid #af9767;
+  color: #fff;
+  padding: 0.3rem;
+  border-radius: 2px;
+}
 p,
 small {
   font-family: Spiegel;
@@ -230,6 +242,14 @@ small {
   padding: 3em 3em;
   padding-bottom: 1em;
   overflow-x: auto;
+}
+.square-border {
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .select img {

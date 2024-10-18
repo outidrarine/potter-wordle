@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Titles from "./gameTitle";
 import ChampionDetails from "./championDetails";
+import Guides from "./guides";
 import Select from "react-select";
 import Victory from "./victory";
 import { saveGamesPlayed, saveTries, saveFirstTries } from "./saveStats";
@@ -116,7 +117,7 @@ export default function Game() {
         <title>Wizardle - Ultimate Harry Potter wizards gussing game</title>
         <meta
           name="description"
-          content="The ultimate quiz game for League of Legends enthusiasts. Guess League of Legends champions infinitely."
+          content="The ultimate quiz game for Harry Potter wizards fan. Guess Harry Potter Wizards base on wizarding hints"
         />
       </Helmet>
 
@@ -124,7 +125,7 @@ export default function Game() {
 
       <div className="d-flex justify-content-center mt-4 mb-3">
         <form
-          className="form-control row g-3 mb-4"
+          className="form-control row g-3 mb-4 form-square"
           onSubmit={Guess}
           id="guess-form"
         >
@@ -200,6 +201,7 @@ export default function Game() {
           ))}
         </div>
       </div>
+      {champions.length > 0 ? <Guides /> : ""}
 
       {correctGuess ? (
         <Victory

@@ -9,17 +9,6 @@ export default function About() {
   );
   return (
     <div id="about">
-      <h3>Inspiration</h3>
-      <p>
-        This site is inspired by <a href="https://loldle.net">loldle.net</a>, a
-        game where you have to guess League of Legends champions daily. This
-        website is a fan-made game inspired by the Harry Potter universe. It is
-        created purely for entertainment purposes and respects the copyrights
-        and intellectual property of J.K. Rowling, Warner Bros., and other
-        rights holders. We do not claim ownership of any characters, names, or
-        concepts from the Harry Potter series. All rights belong to their
-        respective owners.
-      </p>
       <h3>How to play</h3>
       <p>
         Once you've created your nickname, you'll be assigned a wizard to guess.
@@ -77,15 +66,18 @@ export default function About() {
       <h4 className="pb-3 pt-4">Contact Us</h4>
       <p>
         If you'd like to contact us about this site, feel free to send an email
-        to <strong>pod24121994@gmail.com</strong>.{" "}
-        <CopyToClipboard text="pod24121994@gmail.com">
-          <button
-            className="btn btn-outline-dark"
-            onClick={() => setIsCopied(true)}
-          >
-            {isCopied ? "Copied!" : "Copy"}
-          </button>
-        </CopyToClipboard>
+        to :
+        <div>
+          <strong>pod24121994@gmail.com</strong>.
+          <CopyToClipboard text="pod24121994@gmail.com">
+            <button
+              className="btn btn-outline-dark"
+              onClick={() => setIsCopied(true)}
+            >
+              {isCopied ? "Copied!" : "Copy"}
+            </button>
+          </CopyToClipboard>
+        </div>
       </p>
     </div>
   );
