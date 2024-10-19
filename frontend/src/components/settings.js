@@ -121,12 +121,12 @@ export default function Settings() {
     <>
       <button
         onClick={ToggleState}
-        className="btn btn-dark darkBtn p-2 pb-0"
+        className="btn  p-2 pb-0"
         data-tooltip-id="settings-tooltip"
         data-tooltip-content="Settings"
       >
-        <span className="material-symbols-outlined">settings</span>
-        <Tooltip id="settings-tooltip" />
+        <img src={"/wand.png"} className="p-0" alt="Harry Potter About Icon" />
+        <Tooltip opacity={1} id="settings-tooltip" />
       </button>
 
       <Modal

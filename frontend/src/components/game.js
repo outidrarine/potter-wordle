@@ -3,6 +3,8 @@ import axios from "axios";
 import Titles from "./gameTitle";
 import ChampionDetails from "./championDetails";
 import Guides from "./guides";
+import More from "./more";
+
 import Select from "react-select";
 import Victory from "./victory";
 import { saveGamesPlayed, saveTries, saveFirstTries } from "./saveStats";
@@ -204,6 +206,7 @@ export default function Game() {
         </div>
       </div>
       {champions.length > 0 ? <Guides /> : ""}
+      <More />
 
       {correctGuess ? (
         <Victory

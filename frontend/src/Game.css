@@ -136,6 +136,17 @@ small {
   line-height: 0.8em;
   z-index: 0;
 }
+.squareicon {
+  height: 0px;
+  padding-top: 50%;
+  padding-bottom: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0.8em;
+  z-index: 0;
+}
 
 .victoryIcon {
   height: 100%;
@@ -163,6 +174,9 @@ body {
 .low-opacity {
   opacity: 0.6;
 }
+.high-opacity {
+  opacity: 0.8;
+}
 
 .partial {
   background-image: url(../public/yellow.png);
@@ -172,6 +186,18 @@ body {
 .incorrect {
   background-image: url(../public/red.png);
   box-sizing: border-box;
+}
+.applestore {
+  background-image: url(../public/applestore.png);
+  box-sizing: border-box;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.playstore {
+  background-image: url(../public/playstore.png);
+  box-sizing: border-box;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .cb-correct {
@@ -290,6 +316,7 @@ body {
 }
 .answercontainer {
   overflow-x: auto;
+  overflow-y: hidden;
 }
 @media only screen and (max-width: 768px) {
   .championData {

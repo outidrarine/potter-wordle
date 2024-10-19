@@ -6,9 +6,9 @@ import { Tooltip } from "react-tooltip";
 
 export default function Header() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark mb-5">
-      <div className="container-fluid">
-        <img src={"/favicon.webp"} className="m-2" alt="Logo" />
+    <nav className="navbar navbar-expand-lg navbar-light bg-light m-0 p-0 high-opacity">
+      <div className="container">
+        <img src={"/favicon.ico"} className="m-2" alt="Logo" />
         <Link className="navbar-brand" to="/">
           Wizardle
         </Link>
@@ -26,37 +26,54 @@ export default function Header() {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link className="nav-link" to="leaderboard">
-                Leaderboard
-              </Link>
-            </li>
-          </ul>
           <ul className="navbar-nav ms-auto">
-            <div className="d-flex justify-content-start">
+            <div className="d-flex justify-content-center">
               <button
-                className="btn btn-dark darkBtn p-2 pb-0"
+                className="btn p-2 pb-0"
+                data-tooltip-id="scoreboard-tooltip"
+                data-tooltip-content="ScoreBoard"
+              >
+                <li className="nav-item">
+                  <Link className="nav-link" to="leaderboard">
+                    <img
+                      src={"/snitch.png"}
+                      className="p-0"
+                      alt="Harry Potter About Icon"
+                    />
+                  </Link>
+                  <Tooltip opacity={1} id="scoreboard-tooltip" />
+                </li>
+              </button>
+              <button
+                className="btn p-2 pb-0"
                 data-tooltip-id="about-tooltip"
                 data-tooltip-content="About"
               >
                 <li className="nav-item">
                   <Link className="nav-link" to="about">
-                    <span className="material-symbols-outlined">help</span>
+                    <img
+                      src={"/feather.png"}
+                      className="p-0"
+                      alt="Harry Potter About Icon"
+                    />
                   </Link>
-                  <Tooltip id="about-tooltip" />
+                  <Tooltip opacity={1} id="about-tooltip" />
                 </li>
               </button>
               <button
-                className="btn btn-dark darkBtn p-2 pb-0"
+                className="btn p-2 pb-0"
                 data-tooltip-id="legal-tooltip"
                 data-tooltip-content="Legal"
               >
                 <li className="nav-item">
                   <Link className="nav-link" to="legal">
-                    <span className="material-symbols-outlined">gavel</span>
+                    <img
+                      src={"/hat.png"}
+                      className="p-0"
+                      alt="Harry Potter About Icon"
+                    />
                   </Link>
-                  <Tooltip id="legal-tooltip" />
+                  <Tooltip opacity={1} id="legal-tooltip" />
                 </li>
               </button>
               <Settings />
