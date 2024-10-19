@@ -72,7 +72,7 @@ export default function ScoreBoardData() {
 
   return (
     <>
-      <h3 className="text-center pb-3 pt-4">Leaderboard</h3>
+      <h3 className="text-center pb-3 pt-4 white-text">Leaderboard</h3>
       <div className="d-flex justify-content-center text-center">
         <div className="card scoreboard">
           <table className="table table-striped table-hover">

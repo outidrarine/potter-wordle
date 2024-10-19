@@ -121,16 +121,18 @@ export default function Game() {
         />
       </Helmet>
 
-      <h3 className="text-center pb-3">Start guessing your Wizard</h3>
+      <h3 className="text-center pb-3 white-text">
+        Start guessing your Wizard
+      </h3>
 
       <div className="d-flex justify-content-center mt-4 mb-3">
         <form
-          className="form-control row g-3 mb-4 form-square"
+          className="form-control square-border row g-3 mb-4 form-square"
           onSubmit={Guess}
           id="guess-form"
         >
           <Select
-            className="select"
+            className="select "
             options={validGuesses}
             onChange={(selectedOption) => setGuess(selectedOption.value)}
             isDisabled={correctGuess}

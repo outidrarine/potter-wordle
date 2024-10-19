@@ -5,7 +5,7 @@ export default function ChampionDetails(props) {
     return props.isColorBlindMode ? "cb-" : "";
   };
   return (
-    <div className="d-flex justify-content-sm-center ">
+    <div className="d-flex justify-content-sm-center white-text">
       <div className="col-sm-1 currentAnswer partial">
         <div className="squareboxe">
           <div className="">
