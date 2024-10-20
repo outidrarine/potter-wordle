@@ -19,28 +19,24 @@ export default function Victory(props) {
       >
         <Modal.Body>
           <div className="container victory">
-            <div className="card w-50 text-center">
-              <Modal.Header closeButton></Modal.Header>
+            <div className="card w-80 text-center">
+              <Modal.Header className="pt-2" closeButton></Modal.Header>
 
-              <div className="pb-5">
+              <div className="p-3">
                 <h1 className="pb-3">Victory!</h1>
-
-                <img
-                  src={"/win.png"}
-                  alt={props.champion}
-                  className="pb-3 victoryIcon"
-                />
-
+                <p>
+                  Congratulations! 🎉 You've correctly guessed the wizard! Ready
+                  for another challenge? 🧙‍♂️ A new wizard has been chosen at
+                  random—can you guess who it is? Tap "Play Again" to test your
+                  skills and take another guess! 💫
+                </p>
                 <h2>{props.champion}</h2>
-
                 <p className="mb-1 smaller">{props.title}</p>
-
                 {props.tries > 1 ? (
                   <p className="smaller">It took {props.tries} tries</p>
                 ) : (
                   <p className="smaller">First try</p>
                 )}
-
                 <button type="button" class="btn btn-dark" onClick={Close}>
                   Play again
                 </button>
