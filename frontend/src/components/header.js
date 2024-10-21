@@ -38,12 +38,46 @@ export default function Header() {
                     <img
                       src={"/snitch.png"}
                       className="p-0"
-                      alt="Harry Potter About Icon"
+                      alt="Harry Potter Leaderboard Icon"
                     />
                   </Link>
                   <Tooltip opacity={1} id="scoreboard-tooltip" />
                 </li>
               </button>
+
+              <button
+                className="btn p-2 pb-0"
+                data-tooltip-id="legal-tooltip"
+                data-tooltip-content="Legal"
+              >
+                <li className="nav-item">
+                  <Link className="nav-link" to="legal">
+                    <img
+                      src={"/hat.png"}
+                      className="p-0"
+                      alt="Harry Potter Lebal Icon"
+                    />
+                  </Link>
+                  <Tooltip opacity={1} id="legal-tooltip" />
+                </li>
+              </button>
+              <button
+                className="btn p-2 pb-0"
+                data-tooltip-id="contact-tooltip"
+                data-tooltip-content="Contact us"
+              >
+                <li className="nav-item">
+                  <Link className="nav-link" to="contact">
+                    <img
+                      src={"/owl.png"}
+                      className="p-0"
+                      alt="Harry Potter Contact Icon"
+                    />
+                  </Link>
+                  <Tooltip opacity={1} id="contact-tooltip" />
+                </li>
+              </button>
+              <Settings />
               <button
                 className="btn p-2 pb-0"
                 data-tooltip-id="about-tooltip"
@@ -60,23 +94,6 @@ export default function Header() {
                   <Tooltip opacity={1} id="about-tooltip" />
                 </li>
               </button>
-              <button
-                className="btn p-2 pb-0"
-                data-tooltip-id="legal-tooltip"
-                data-tooltip-content="Legal"
-              >
-                <li className="nav-item">
-                  <Link className="nav-link" to="legal">
-                    <img
-                      src={"/hat.png"}
-                      className="p-0"
-                      alt="Harry Potter About Icon"
-                    />
-                  </Link>
-                  <Tooltip opacity={1} id="legal-tooltip" />
-                </li>
-              </button>
-              <Settings />
             </div>
           </ul>
         </div>

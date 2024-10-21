@@ -144,13 +144,6 @@ export default function Game() {
             noOptionsMessage={({ inputValue }) => "Loading..."}
             formatOptionLabel={(data) => (
               <div className="select-option">
-                {/* <LazyLoad offset={200}>
-                  <img
-                    //src={"/40_40/champions/" + data.image + ".webp"}
-                    src={"/40_40/champions/" + "test" + ".webp"}
-                    alt="Champion icon"
-                  />
-                </LazyLoad> */}
                 <span>{data.label}</span>
               </div>
             )}

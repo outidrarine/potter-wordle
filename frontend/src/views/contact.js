@@ -1,8 +1,9 @@
 import React from "react";
 import AboutComponent from "../components/about";
 import { Helmet } from "react-helmet";
+import Contactus from "../components/contact";
 
-export default function About() {
+export default function Contact() {
   return (
     <div className="container mb-5 pb-4">
       <Helmet>
@@ -13,11 +14,11 @@ export default function About() {
         />
       </Helmet>
 
-      <h3 className="text-center pb-3 pt-4">About</h3>
+      <h3 className="text-center pb-3 pt-4 white-text">Contact</h3>
 
       <div className="d-flex justify-content-center">
         <div className="card p-5 w-75 text-start">
-          <AboutComponent />
+          <Contactus />
         </div>
       </div>
     </div>

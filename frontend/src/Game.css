@@ -295,7 +295,6 @@ body {
 }
 
 .select input[type="text"] {
-  caret-color: transparent;
 }
 
 .select-option {

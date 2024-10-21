@@ -14,7 +14,7 @@ import MyStats from "./views/myStats";
 
 import { Provider } from "react-redux";
 import store from "./store/store";
-import ReactGA from "react-ga";
+import Contact from "./views/contact";
 
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
           <Route path="/leaderboard" element={<Scoreboard />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/stats" element={<Stats />} />
           <Route path="/stats/me" element={<MyStats />} />
           <Route path="*" element={<Navigate to="/" />} />
