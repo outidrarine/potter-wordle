@@ -10,6 +10,10 @@
   font-size: 1.3em;
 }
 
+.pointerCursor {
+  cursor: pointer;
+}
+
 .navbar img {
   min-height: 3vw;
   max-height: 5vh;

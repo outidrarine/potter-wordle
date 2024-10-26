@@ -37,8 +37,22 @@ export default function Victory(props) {
                 ) : (
                   <p className="smaller">First try</p>
                 )}
-                <button type="button" class="btn btn-dark" onClick={Close}>
+                <button type="button" class="btn btn-dark mx-1" onClick={Close}>
                   Play again
+                </button>
+                <button
+                  type="button"
+                  class="btn  mx-1"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.open(
+                      "https://forms.gle/4iJGSeDyxgEnV9o79",
+                      "_blank",
+                      "noopener,noreferrer"
+                    );
+                  }}
+                >
+                  Give Feedback
                 </button>
               </div>
             </div>

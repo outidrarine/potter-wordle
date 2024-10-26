@@ -4,6 +4,7 @@ import Titles from "./gameTitle";
 import ChampionDetails from "./championDetails";
 import Guides from "./guides";
 import More from "./more";
+import Rankuser from "./rankuser";
 
 import Select from "react-select";
 import Victory from "./victory";
@@ -23,6 +24,10 @@ export default function Game() {
   const [currentGuess, setGuess] = useState(validGuesses[0]);
   const [correctGuess, setCorrectGuess] = useState(false);
   const [title, setTitle] = useState("");
+  const [currentselect, setcurrentselect] = useState(null);
+  const [inputplaceholder, setinputplaceholder] = useState(
+    "Start by guessing a wizard!"
+  );
 
   const isColorBlindMode = useSelector(
     (state) => state.colorBlindReducer.isColorBlindMode
@@ -69,7 +74,7 @@ export default function Game() {
 
     setValidGuesses(validGuesses.filter((item) => item.label !== currentGuess));
     setGuesses((guesses) => [...guesses, currentGuess]);
-
+    setcurrentselect(currentGuess);
     axios
       .post(
         Config.url + "/guess",
@@ -96,6 +101,9 @@ export default function Game() {
           saveGamesPlayed();
           setCorrectGuess(true);
           setTitle(response.data.title);
+          setinputplaceholder("Nice! Click Next to guess another wizard.");
+        } else {
+          setinputplaceholder("Wrong choice! Try again.");
         }
       })
       .catch((error) => {
@@ -127,19 +135,20 @@ export default function Game() {
         Start guessing your Wizard
       </h3>
 
-      <div className="d-flex justify-content-center mt-4 mb-3">
+      <div className="d-flex justify-content-center mt-4 ">
         <form
           className="form-control square-border row g-3 mb-4 form-square"
           onSubmit={Guess}
           id="guess-form"
         >
           <Select
+            key={currentselect}
             className="select "
             options={validGuesses}
             onChange={(selectedOption) => setGuess(selectedOption.value)}
             isDisabled={correctGuess}
             styles={SelectStyles}
-            placeholder="Type Wizard's name"
+            placeholder={inputplaceholder}
             filterOption={customFilterOption}
             noOptionsMessage={({ inputValue }) => "Loading..."}
             formatOptionLabel={(data) => (
@@ -154,7 +163,10 @@ export default function Game() {
               <>
                 <button
                   className="btn btn-outline-dark mb-3 mt-1 min-vw-25"
-                  onClick={Restart}
+                  onClick={() => {
+                    Restart();
+                    setinputplaceholder("Start by guessing a wizard!");
+                  }}
                 >
                   Next
                 </button>
@@ -167,7 +179,10 @@ export default function Game() {
             {!correctGuess && guesses.length >= 10 ? (
               <button
                 className="btn btn-dark mb-3 mt-1 min-vw-25"
-                onClick={() => Reroll("champion")}
+                onClick={() => {
+                  Reroll("champion");
+                  setinputplaceholder("Start by guessing a wizard!");
+                }}
               >
                 Reroll
               </button>
@@ -176,6 +191,9 @@ export default function Game() {
             )}
           </div>
         </form>
+      </div>
+      <div className="mb-4">
+        <Rankuser />
       </div>
 
       <div id="champions">
@@ -199,6 +217,7 @@ export default function Game() {
         </div>
       </div>
       {champions.length > 0 ? <Guides /> : ""}
+
       <More />
 
       {correctGuess ? (

@@ -1,20 +1,21 @@
-import React from 'react';
+import React from "react";
 import ScoreBoardData from "../components/scoreBoardData";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 
 export default function ScoreBoard() {
+  return (
+    <>
+      <div className="container">
+        <Helmet>
+          <title>Wizardle - Leaderboard</title>
+          <meta
+            name="description"
+            content="wizardle.pegmy.com - Leaderboard of the top 10 players."
+          />
+        </Helmet>
 
-    return (
-        <>
-            <div className="container">
-
-                <Helmet>
-                    <title>Infiniteloldle - Leaderboard</title>
-                    <meta name="description" content="Infiniteloldle.com - Leaderboard of the top 10 players." />
-                </Helmet>
-                
-                <ScoreBoardData/>
-            </div>
-        </>
-    )
+        <ScoreBoardData />
+      </div>
+    </>
+  );
 }

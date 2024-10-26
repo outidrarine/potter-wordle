@@ -13,12 +13,12 @@ export default function More() {
       <div className=" text-center mb-2 d-flex answercontainer px-3 guidescontainer">
         <div className="container col-md-7 col-lg-5 my-4 py-3 square-border position-relative ">
           <div
-            className="position-absolute closebutton"
+            className="position-absolute closebutton pointerCursor"
             onClick={() => hideguides()}
           >
             X
           </div>
-          <h4>Want more?</h4>
+          <h4>More Harry Potter games?</h4>
           <p>Play our other games:</p>
           <div className="d-flex justify-content-center my-2 ">
             <div className=" col-2 playstore mx-1">

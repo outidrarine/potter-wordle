@@ -12,11 +12,12 @@ export default function Guides() {
       <div className=" text-center mb-2 d-flex answercontainer px-3 guidescontainer">
         <div className="container col-md-7 col-lg-5 mt-5 square-border position-relative ">
           <div
-            className="position-absolute closebutton"
+            className="position-absolute closebutton pointerCursor"
             onClick={() => hideguides()}
           >
             X
           </div>
+          <p>How to play : </p>
           <div className="d-flex justify-content-center my-4 ">
             <div className="col-sm-1 currentAnswer mx-1">
               <div

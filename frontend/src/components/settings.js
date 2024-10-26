@@ -7,7 +7,7 @@ import { Tooltip } from "react-tooltip";
 import { Reroll } from "./reroll";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
-export default function Settings() {
+export default function Settings(props) {
   const [isShown, setIsShown] = useState(false);
   const [exportMode, setExportMode] = useState(false);
   const [importMode, setImportMode] = useState(false);
@@ -119,19 +119,35 @@ export default function Settings() {
 
   return (
     <>
-      <button
-        onClick={ToggleState}
-        className="btn  p-2 pb-0"
-        data-tooltip-id="settings-tooltip"
-        data-tooltip-content="Settings"
-      >
-        <img
-          src={"/wand.png"}
-          className="p-0"
-          alt="Harry Potter Settings Icon"
-        />
-        <Tooltip opacity={1} id="settings-tooltip" />
-      </button>
+      {!props.hideButton ? (
+        <button
+          onClick={ToggleState}
+          className="btn  p-2 pb-0"
+          data-tooltip-id="settings-tooltip"
+          data-tooltip-content="Settings"
+        >
+          <img
+            src={"/wand.png"}
+            className="p-0"
+            alt="Harry Potter Settings Icon"
+          />
+          <Tooltip opacity={1} id="settings-tooltip" />
+        </button>
+      ) : (
+        <div
+          className="pointerCursor"
+          onClick={ToggleState}
+          data-tooltip-id="settings-tooltip"
+          data-tooltip-content="Settings"
+        >
+          <span className="align-center pointerCursor">
+            Username : {props.text}
+          </span>
+          <span class="material-symbols-outlined">border_color</span>
+
+          <Tooltip opacity={1} id="settings-tooltip" />
+        </div>
+      )}
 
       <Modal
         show={isShown}

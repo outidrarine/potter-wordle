@@ -7,10 +7,10 @@ export default function MyStats() {
     <>
       <div className="container pb-5">
         <Helmet>
-          <title>Infiniteloldle - My statistics</title>
+          <title>Wizardle - My statistics</title>
           <meta
             name="description"
-            content="Infiniteloldle.com - My statistics"
+            content="wizardle.pegmy.com - My statistics"
           />
         </Helmet>
 
