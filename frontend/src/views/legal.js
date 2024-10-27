@@ -9,7 +9,7 @@ export default function Legal() {
         <title>Wizardle - Legal disclaimer - Privacy policy</title>
         <meta
           name="description"
-          content="Wizardle.pegmy.com - Legal disclaimer and privacy policy section."
+          content="harrypottergaming.com - Legal disclaimer and privacy policy section."
         />
       </Helmet>
 

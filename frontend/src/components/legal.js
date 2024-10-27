@@ -22,13 +22,13 @@ export default function Legal() {
         <h2>Privacy Policy</h2>
         <p>Effective Date: 10.06.2024</p>
         <p>
-          By accessing or using wizardle.pegmy.com, you acknowledge and consent
-          to the practices described in this Privacy Policy.
+          By accessing or using harrypottergaming.com, you acknowledge and
+          consent to the practices described in this Privacy Policy.
         </p>
         <h3>Information We Collect</h3>
         <h5>1. Account Registration Information</h5>
         <p>
-          When you create an account on wizardle.pegmy.com, we collect the
+          When you create an account on harrypottergaming.com, we collect the
           following information:
         </p>
         <ul>
@@ -41,7 +41,7 @@ export default function Legal() {
         <h5>2. Automatically Collected Information</h5>
         <p>
           We may automatically collect certain information about your usage of
-          wizardle.pegmy.com, including:
+          harrypottergaming.com, including:
         </p>
         <ul>
           <li>Timestamp (of the account creation date)</li>
@@ -357,8 +357,8 @@ export default function Legal() {
         <h5>1. Third-Party Analytics</h5>
         <p>
           We may employ third-party analytics tools and services to gain
-          insights into user interactions with wizardle.pegmy.com. These tools
-          can collect and analyze data regarding your use of the website,
+          insights into user interactions with harrypottergaming.com. These
+          tools can collect and analyze data regarding your use of the website,
           including cookies and usage statistics, to help us improve our
           services.
         </p>
@@ -373,17 +373,17 @@ export default function Legal() {
         </p>
         <h5>2. Third-Party Links</h5>
         <p>
-          wizardle.pegmy.com may feature links to third-party websites or
+          harrypottergaming.com may feature links to third-party websites or
           services. We do not assume responsibility for the privacy practices or
           content of these external sites. We recommend reviewing the privacy
           policies of any third-party sites you visit.
         </p>
         <h3>Children's Privacy</h3>
         <p>
-          wizardle.pegmy.com is not intended for children under the age of 16.
-          We do not knowingly collect personal information from minors. If you
-          believe we have unintentionally gathered personal information from a
-          child, please contact us immediately, and we will take appropriate
+          harrypottergaming.com is not intended for children under the age of
+          16. We do not knowingly collect personal information from minors. If
+          you believe we have unintentionally gathered personal information from
+          a child, please contact us immediately, and we will take appropriate
           measures to delete that information promptly.
         </p>
         <h3>GDPR Compliance</h3>
@@ -400,7 +400,7 @@ export default function Legal() {
         <p>
           The California Consumer Privacy Act (CCPA) provides California
           residents with certain rights regarding their personal information.
-          wizardle.pegmy.com respects and complies with the CCPA. Below is a
+          harrypottergaming.com respects and complies with the CCPA. Below is a
           summary of your CCPA rights:
         </p>
         <ol>
@@ -426,15 +426,15 @@ export default function Legal() {
             <strong>Non-Discrimination: </strong>
             We will not discriminate against you for exercising your CCPA
             rights. However, please note that certain services and features
-            provided by wizardle.pegmy.com may require the collection and use of
-            your personal information.
+            provided by harrypottergaming.com may require the collection and use
+            of your personal information.
           </li>
         </ol>
 
         <p>
           Exercising Your CCPA Rights: If you are a California resident and
           would like to exercise any of your CCPA rights described above, you
-          can contact us at wizardle.pegmy.com. Please provide sufficient
+          can contact us at harrypottergaming.com. Please provide sufficient
           information to verify your identity and specify the CCPA right you
           wish to exercise. We may need to request additional information to
           verify your request.
@@ -457,14 +457,14 @@ export default function Legal() {
           We may update this Privacy Policy from time to time to reflect changes
           in our practices or legal requirements. We will notify you of any
           material changes by posting the updated Privacy Policy on
-          wizardle.pegmy.com. Your continued use of the website after such
+          harrypottergaming.com. Your continued use of the website after such
           changes constitutes your acceptance of the revised Privacy Policy.
         </p>
         <h3>Contact Us</h3>
         <p>
           If you have any questions, concerns, or requests regarding this
-          Privacy Policy or the privacy practices of wizardle.pegmy.com, please
-          contact us at: <strong>pod24121994@gmail.com</strong>.{" "}
+          Privacy Policy or the privacy practices of harrypottergaming.com,
+          please contact us at: <strong>pod24121994@gmail.com</strong>.{" "}
           <CopyToClipboard text="pod24121994@gmail.com">
             <button
               className="btn btn-outline-dark"
@@ -476,8 +476,8 @@ export default function Legal() {
         </p>
         <p>
           Please review this Privacy Policy carefully. By using
-          wizardle.pegmy.com, you consent to the collection, use, and storage of
-          your personal information as described in this Privacy Policy.
+          harrypottergaming.com, you consent to the collection, use, and storage
+          of your personal information as described in this Privacy Policy.
         </p>
       </div>
     </div>

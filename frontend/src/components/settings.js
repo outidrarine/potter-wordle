@@ -126,11 +126,7 @@ export default function Settings(props) {
           data-tooltip-id="settings-tooltip"
           data-tooltip-content="Settings"
         >
-          <img
-            src={"/wand.png"}
-            className="p-0"
-            alt="Harry Potter Settings Icon"
-          />
+          <span>Settings</span>
           <Tooltip opacity={1} id="settings-tooltip" />
         </button>
       ) : (

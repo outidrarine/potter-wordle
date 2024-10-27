@@ -10,7 +10,7 @@ export default function MyStats() {
           <title>Wizardle - My statistics</title>
           <meta
             name="description"
-            content="wizardle.pegmy.com - My statistics"
+            content="harrypottergaming.com - My statistics"
           />
         </Helmet>
 

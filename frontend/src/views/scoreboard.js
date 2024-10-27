@@ -10,7 +10,7 @@ export default function ScoreBoard() {
           <title>Wizardle - Leaderboard</title>
           <meta
             name="description"
-            content="wizardle.pegmy.com - Leaderboard of the top 10 players."
+            content="harrypottergaming.com - Leaderboard of the top 10 players."
           />
         </Helmet>
 

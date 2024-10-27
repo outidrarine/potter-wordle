@@ -35,11 +35,7 @@ export default function Header() {
               >
                 <li className="nav-item">
                   <Link className="nav-link" to="leaderboard">
-                    <img
-                      src={"/snitch.png"}
-                      className="p-0"
-                      alt="Harry Potter Leaderboard Icon"
-                    />
+                    <span>Scoreboard</span>
                   </Link>
                   <Tooltip opacity={1} id="scoreboard-tooltip" />
                 </li>
@@ -52,11 +48,7 @@ export default function Header() {
               >
                 <li className="nav-item">
                   <Link className="nav-link" to="legal">
-                    <img
-                      src={"/hat.png"}
-                      className="p-0"
-                      alt="Harry Potter Lebal Icon"
-                    />
+                    <span>Legal</span>
                   </Link>
                   <Tooltip opacity={1} id="legal-tooltip" />
                 </li>
@@ -68,11 +60,7 @@ export default function Header() {
               >
                 <li className="nav-item">
                   <Link className="nav-link" to="contact">
-                    <img
-                      src={"/owl.png"}
-                      className="p-0"
-                      alt="Harry Potter Contact Icon"
-                    />
+                    <span>Contact</span>
                   </Link>
                   <Tooltip opacity={1} id="contact-tooltip" />
                 </li>
@@ -85,11 +73,7 @@ export default function Header() {
               >
                 <li className="nav-item">
                   <Link className="nav-link" to="about">
-                    <img
-                      src={"/feather.png"}
-                      className="p-0"
-                      alt="Harry Potter About Icon"
-                    />
+                    <span>About</span>
                   </Link>
                   <Tooltip opacity={1} id="about-tooltip" />
                 </li>
