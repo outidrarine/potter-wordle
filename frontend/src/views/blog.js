@@ -1,8 +1,12 @@
 import React from "react";
 import AboutComponent from "../components/about";
 import { Helmet } from "react-helmet";
-import Postsum from "../components/posts/postsum";
-import Postone from "../components/posts/Postone";
+import Post1 from "../components/posts/Post1";
+import Post2 from "../components/posts/Post2";
+import Post3 from "../components/posts/Post3";
+import Post4 from "../components/posts/Post4";
+import Post5 from "../components/posts/Post5";
+import Post6 from "../components/posts/Post6";
 
 export default function Blog() {
   return (
@@ -22,7 +26,12 @@ export default function Blog() {
           <div className="container ">
             <div className="row gx-4 gx-lg-5 justify-content-center">
               <div className="col-md-10 col-lg-8 col-xl-7">
-                <Postone sum="true" />
+                <Post1 sum="true" />
+                <Post2 sum="true" />
+                <Post3 sum="true" />
+                <Post4 sum="true" />
+                <Post5 sum="true" />
+                <Post6 sum="true" />
               </div>
             </div>
           </div>

@@ -1,18 +1,23 @@
-import React, { Component } from "react";
-import AboutComponent from "../components/about";
+import React from "react";
 import { Helmet } from "react-helmet";
-import Postsum from "../components/posts/postsum";
 import { useParams } from "react-router-dom";
-import { components } from "react-select";
-import Postone from "../components/posts/Postone";
-import Posttwo from "../components/posts/posttwo";
+import Post1 from "../components/posts/Post1";
+import Post2 from "../components/posts/Post2";
+import Post3 from "../components/posts/Post3";
+import Post4 from "../components/posts/Post4";
+import Post5 from "../components/posts/Post5";
+import Post6 from "../components/posts/Post6";
 
 export default function Post(props) {
   const { postname } = useParams();
 
   const components = {
-    postone: Postone,
-    posttwo: Posttwo,
+    "harry-potter-games-learned-values": Post1,
+    "harry-potter-games-fans-connect": Post2,
+    "harry-potter-games-games-evolution": Post3,
+    "harry-potter-spells": Post4,
+    "harry-potter-games-house": Post5,
+    "harry-potter-gaming-impact": Post6,
   };
 
   const PostToShow = components[postname];
