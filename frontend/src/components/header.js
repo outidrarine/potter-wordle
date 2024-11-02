@@ -78,6 +78,18 @@ export default function Header() {
                   <Tooltip opacity={1} id="about-tooltip" />
                 </li>
               </button>
+              <button
+                className="btn p-2 pb-0"
+                data-tooltip-id="blog-tooltip"
+                data-tooltip-content="Blog"
+              >
+                <li className="nav-item">
+                  <Link className="nav-link" to="blog">
+                    <span>Blog</span>
+                  </Link>
+                  <Tooltip opacity={1} id="blog-tooltip" />
+                </li>
+              </button>
             </div>
           </ul>
         </div>
