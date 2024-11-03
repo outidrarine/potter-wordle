@@ -7,6 +7,15 @@ import Post3 from "../components/posts/Post3";
 import Post4 from "../components/posts/Post4";
 import Post5 from "../components/posts/Post5";
 import Post6 from "../components/posts/Post6";
+import Post7 from "../components/posts/Post7";
+import Post8 from "../components/posts/Post8";
+import Post9 from "../components/posts/Post9";
+import Post10 from "../components/posts/Post10";
+import Post11 from "../components/posts/Post11";
+import Post12 from "../components/posts/Post12";
+import Post13 from "../components/posts/Post13";
+import Post14 from "../components/posts/Post14";
+import Post15 from "../components/posts/Post15";
 
 export default function Post(props) {
   const { postname } = useParams();
@@ -18,6 +27,15 @@ export default function Post(props) {
     "harry-potter-spells": Post4,
     "harry-potter-games-house": Post5,
     "harry-potter-gaming-impact": Post6,
+    "harry-potter-gaming-secrets": Post7,
+    "harry-potter-gaming-spells": Post8,
+    "harry-potter-gaming-lessons": Post9,
+    "harry-potter-exploring-hogwarts": Post10,
+    "harry-potter-exploring-spells": Post11,
+    "harry-potter-magical-creatures": Post12,
+    "harry-potter-magical-creatures-role": Post13,
+    "harry-potter-hogwarts-subjects": Post14,
+    "harry-potter-friendship-values": Post15,
   };
 
   const PostToShow = components[postname];

@@ -24,7 +24,7 @@ export default function Post5(props) {
             <a className="mx-2" href="http://pegmy.com/">
               Pegmy
             </a>
-            on September 24, 2023
+            on November 02, 2024
           </p>
           <hr className="my-4" />
         </div>
@@ -126,7 +126,7 @@ export default function Post5(props) {
                     <img
                       className="img-fluid"
                       src="/assets/img/harry-ptter-awesome-games.webp"
-                      alt="Harry Potter Games expectations"
+                      alt="Harry Potter gaming culture"
                     />
                   </a>
                   <div className="text-center">

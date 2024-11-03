@@ -3,7 +3,6 @@ import "./Main.css";
 import "./Styles.css";
 
 import { Routes, Route, Navigate } from "react-router-dom";
-import { useEffect } from "react";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import Game from "./components/game";

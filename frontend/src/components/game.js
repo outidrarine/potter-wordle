@@ -218,8 +218,6 @@ export default function Game() {
       </div>
       {champions.length > 0 ? <Guides /> : ""}
 
-      <More />
-
       {correctGuess ? (
         <Victory
           id="victory"

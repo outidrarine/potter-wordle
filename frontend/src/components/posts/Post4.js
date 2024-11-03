@@ -22,7 +22,7 @@ export default function Post4(props) {
             <a className="mx-2" href="http://pegmy.com/">
               Pegmy
             </a>
-            on September 24, 2023
+            on November 02, 2024
           </p>
           <hr className="my-4" />
         </div>

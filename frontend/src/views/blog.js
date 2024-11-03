@@ -7,6 +7,15 @@ import Post3 from "../components/posts/Post3";
 import Post4 from "../components/posts/Post4";
 import Post5 from "../components/posts/Post5";
 import Post6 from "../components/posts/Post6";
+import Post7 from "../components/posts/Post7";
+import Post8 from "../components/posts/Post8";
+import Post9 from "../components/posts/Post9";
+import Post10 from "../components/posts/Post10";
+import Post11 from "../components/posts/Post11";
+import Post12 from "../components/posts/Post12";
+import Post13 from "../components/posts/Post13";
+import Post14 from "../components/posts/Post14";
+import Post15 from "../components/posts/Post15";
 
 export default function Blog() {
   return (
@@ -32,6 +41,15 @@ export default function Blog() {
                 <Post4 sum="true" />
                 <Post5 sum="true" />
                 <Post6 sum="true" />
+                <Post7 sum="true" />
+                <Post8 sum="true" />
+                <Post9 sum="true" />
+                <Post10 sum="true" />
+                <Post11 sum="true" />
+                <Post12 sum="true" />
+                <Post13 sum="true" />
+                <Post14 sum="true" />
+                <Post15 sum="true" />
               </div>
             </div>
           </div>
