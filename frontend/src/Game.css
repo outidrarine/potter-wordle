@@ -182,7 +182,10 @@ body {
   background-image: url(../public/yellow.png);
   background-size: cover;
 }
-
+.answername {
+  background-color: white;
+  color: black;
+}
 .incorrect {
   background-image: url(../public/red.png);
   box-sizing: border-box;

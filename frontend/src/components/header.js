@@ -65,7 +65,6 @@ export default function Header() {
                   <Tooltip opacity={1} id="contact-tooltip" />
                 </li>
               </button>
-              <Settings />
               <button
                 className="btn p-2 pb-0"
                 data-tooltip-id="about-tooltip"
@@ -90,6 +89,7 @@ export default function Header() {
                   <Tooltip opacity={1} id="blog-tooltip" />
                 </li>
               </button>
+              <Settings />
             </div>
           </ul>
         </div>
