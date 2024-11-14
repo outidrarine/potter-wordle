@@ -7,6 +7,7 @@ export default function About() {
     <div className="container mb-5 pb-4">
       <Helmet>
         <title>Wizardle - Ultimate Harry Potter Quiz</title>
+        <link rel="canonical" href={window.location.href} />
         <meta
           name="description"
           content="Explore an endless world of knowledge and test your expertise as you guess and identify the Harry Potter wizards."

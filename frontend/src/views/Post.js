@@ -17,7 +17,7 @@ import Post13 from "../components/posts/Post13";
 import Post14 from "../components/posts/Post14";
 import Post15 from "../components/posts/Post15";
 
-export default function Post(props) {
+export default function Post() {
   const { postname } = useParams();
 
   const components = {
@@ -44,6 +44,7 @@ export default function Post(props) {
     <div className="container mb-5 pb-4">
       <Helmet>
         <title>Wizardle - Ultimate Harry Potter Quiz</title>
+        <link rel="canonical" href={window.location.href} />
         <meta
           name="description"
           content="Explore an endless world of knowledge and test your expertise as you guess and identify the Harry Potter wizards."

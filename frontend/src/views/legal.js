@@ -7,6 +7,7 @@ export default function Legal() {
     <div className="container pb-5">
       <Helmet>
         <title>Wizardle - Legal disclaimer - Privacy policy</title>
+        <link rel="canonical" href={window.location.href} />
         <meta
           name="description"
           content="harrypottergaming.com - Legal disclaimer and privacy policy section."

@@ -125,6 +125,7 @@ export default function Game() {
     <div className="container main pt-4 pb-5 mb-5">
       <Helmet>
         <title>Wizardle - Ultimate Harry Potter wizards gussing game</title>
+        <link rel="canonical" href={window.location.href} />
         <meta
           name="description"
           content="The ultimate quiz game for Harry Potter wizards fan. Guess Harry Potter Wizards base on wizarding hints"

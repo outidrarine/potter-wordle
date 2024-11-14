@@ -8,6 +8,7 @@ export default function ScoreBoard() {
       <div className="container">
         <Helmet>
           <title>Wizardle - Leaderboard</title>
+          <link rel="canonical" href={window.location.href} />
           <meta
             name="description"
             content="harrypottergaming.com - Leaderboard of the top 10 players."
