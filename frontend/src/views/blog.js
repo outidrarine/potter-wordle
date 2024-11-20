@@ -16,6 +16,21 @@ import Post12 from "../components/posts/Post12";
 import Post13 from "../components/posts/Post13";
 import Post14 from "../components/posts/Post14";
 import Post15 from "../components/posts/Post15";
+import Post16 from "../components/posts/Post16";
+import Post17 from "../components/posts/Post17";
+import Post18 from "../components/posts/Post18";
+import Post19 from "../components/posts/Post19";
+import Post20 from "../components/posts/Post20";
+import Post21 from "../components/posts/Post21";
+import Post22 from "../components/posts/Post22";
+import Post23 from "../components/posts/Post23";
+import Post24 from "../components/posts/Post24";
+import Post25 from "../components/posts/Post25";
+import Post26 from "../components/posts/Post26";
+import Post27 from "../components/posts/Post27";
+import Post28 from "../components/posts/Post28";
+import Post29 from "../components/posts/Post29";
+import Post30 from "../components/posts/Post30";
 
 export default function Blog() {
   return (
@@ -51,6 +66,21 @@ export default function Blog() {
                 <Post13 sum="true" />
                 <Post14 sum="true" />
                 <Post15 sum="true" />
+                <Post16 sum="true" />
+                <Post17 sum="true" />
+                <Post18 sum="true" />
+                <Post19 sum="true" />
+                <Post20 sum="true" />
+                <Post21 sum="true" />
+                <Post22 sum="true" />
+                <Post23 sum="true" />
+                <Post24 sum="true" />
+                <Post25 sum="true" />
+                <Post26 sum="true" />
+                <Post27 sum="true" />
+                <Post28 sum="true" />
+                <Post29 sum="true" />
+                <Post30 sum="true" />
               </div>
             </div>
           </div>

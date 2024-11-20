@@ -16,6 +16,21 @@ import Post12 from "../components/posts/Post12";
 import Post13 from "../components/posts/Post13";
 import Post14 from "../components/posts/Post14";
 import Post15 from "../components/posts/Post15";
+import Post16 from "../components/posts/Post16";
+import Post17 from "../components/posts/Post17";
+import Post18 from "../components/posts/Post18";
+import Post19 from "../components/posts/Post19";
+import Post20 from "../components/posts/Post20";
+import Post21 from "../components/posts/Post21";
+import Post22 from "../components/posts/Post22";
+import Post23 from "../components/posts/Post23";
+import Post24 from "../components/posts/Post24";
+import Post25 from "../components/posts/Post25";
+import Post26 from "../components/posts/Post26";
+import Post27 from "../components/posts/Post27";
+import Post28 from "../components/posts/Post28";
+import Post29 from "../components/posts/Post29";
+import Post30 from "../components/posts/Post30";
 
 export default function Post() {
   const { postname } = useParams();
@@ -36,6 +51,21 @@ export default function Post() {
     "harry-potter-magical-creatures-role": Post13,
     "harry-potter-hogwarts-subjects": Post14,
     "harry-potter-friendship-values": Post15,
+    "hogwarts-mystery-relics": Post16,
+    "marauder-map-significance": Post17,
+    "harry-potter-room-of-requirement": Post18,
+    "hogwarts-magical-creatures": Post19,
+    "house-elves-unsung-heroes-wizarding-world": Post20,
+    "power-of-elder-wand": Post21,
+    "albus-dumbledore-secrets": Post22,
+    "hogwarts-castle-mysteries": Post23,
+    "the-dark-mark-symbol-of-fear-and-power": Post24,
+    "severus-snape-enigma": Post25,
+    "draco-malfoy-from-villain-to-redeemed": Post26,
+    "triwizard-tournament-significance": Post27,
+    "deathly-hallows-significance": Post28,
+    "harry-potter-journey": Post29,
+    "harry-potter-dumbledores-army": Post30,
   };
 
   const PostToShow = components[postname];
